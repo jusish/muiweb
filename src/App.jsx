@@ -6,7 +6,7 @@ import Navbar from "./components/NavBar";
 
 function App() {
   return (
-    <Box>
+    <Box sx={{margin:0}}>
       <Navbar />
       <Stack justifyContent={"space-center"} direction={"row"}>
         <SideBar />
