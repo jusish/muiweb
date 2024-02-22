@@ -43,33 +43,34 @@ const SideBar = () => {
           width: "100%",
           maxWidth: 360,
           bgcolor: "background.paper",
+          
         }}
         component="nav"
         aria-labelledby="nested-list-subheader"
         subheader={<ListSubheader>Home</ListSubheader>}
       >
-        <ListItemButton>
+        <ListItemButton sx={{borderRadius: 20}}>
           <ListItemIcon>
             <SendIcon />
           </ListItemIcon>
           <ListItemText primary="Sent mail" />
         </ListItemButton>
-        <ListItemButton>
+        <ListItemButton sx={{borderRadius: 20}}>
           <ListItemIcon>
             <DraftsIcon />
           </ListItemIcon>
           <ListItemText primary="Drafts" />
         </ListItemButton>
-        <ListItemButton onClick={handleClick}>
+        <ListItemButton onClick={handleClick} sx={{borderRadius: 20}}>
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
           <ListItemText primary="Inbox" />
           {open ? <ExpandLess /> : <ExpandMore />}
-        </ListItemButton>
+        </ListItemButton >
         <Collapse in={open} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 4 }}>
+            <ListItemButton sx={{ pl: 4, borderRadius: 20 }}>
               <ListItemIcon>
                 <StarBorder />
               </ListItemIcon>
