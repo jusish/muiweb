@@ -37,13 +37,12 @@ const SideBar = () => {
     setChecked(newChecked);
   };
   return (
-    <Box flexGrow={0.5}>
+    <Box flexGrow={0.5} position={"sticky"}>
       <List
         sx={{
           width: "100%",
           maxWidth: 360,
           bgcolor: "background.paper",
-          marginTop: 5,
         }}
         component="nav"
         aria-labelledby="nested-list-subheader"
@@ -87,7 +86,7 @@ const SideBar = () => {
           <ListItemIcon>
             <Brightness4Icon />
           </ListItemIcon>
-          <ListItemText id="switch-list-label-mode" primary="Dark-Mode" />
+          <ListItemText id="switch-list-label-mode" primary="Dark" />
           <Switch
             edge="end"
             onChange={handleToggle("mode")}
