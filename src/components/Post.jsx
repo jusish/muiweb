@@ -1,26 +1,26 @@
+import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
-export default function Post() {
+const Post = ({ image, title, body }) => {
   return (
-    <Card sx={{maxWidth:500}}>
+    <Card sx={{ maxWidth: "80%" }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="200"
-          image="/public/3.png"
-          alt="green iguana"
+          image={image}
+          alt="Post Image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {body}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -31,4 +31,12 @@ export default function Post() {
       </CardActions>
     </Card>
   );
-}
+};
+
+Post.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+};
+
+export default Post;

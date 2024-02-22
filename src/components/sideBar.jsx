@@ -37,7 +37,7 @@ const SideBar = () => {
     setChecked(newChecked);
   };
   return (
-    <Box flexGrow={0.5} position={"sticky"}>
+    <Box flexGrow={1}>
       <List
         sx={{
           width: "100%",
