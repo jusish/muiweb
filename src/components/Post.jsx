@@ -6,13 +6,13 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 
 export default function Post() {
   return (
-    <Card sx={{ width: "80%" }}>
+    <Card sx={{maxWidth:500}}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="200"
-          image="../assets/react.svg"
-          alt="lizard"
+          image="/public/3.png"
+          alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
