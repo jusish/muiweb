@@ -11,7 +11,7 @@ const Post = ({ image, title, body }) => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="200"
+          height="300"
           image={image}
           alt="Post Image"
         />
