@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import * as React from "react";
 import ListSubheader from "@mui/material/ListSubheader";
 import List from "@mui/material/List";
@@ -15,26 +16,15 @@ import Box from "@mui/material/Box";
 import Switch from "@mui/material/Switch";
 import ListItem from "@mui/material/ListItem";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
-const SideBar = () => {
+const SideBar = ({ handleModeChange }) => {
   const [open, setOpen] = React.useState(true);
 
   const handleClick = () => {
     setOpen(!open);
   };
 
-  const [checked, setChecked] = React.useState(["mode"]);
-
-  const handleToggle = (value) => () => {
-    const currentIndex = checked.indexOf(value);
-    const newChecked = [...checked];
-
-    if (currentIndex === -1) {
-      newChecked.push(value);
-    } else {
-      newChecked.splice(currentIndex, 1);
-    }
-
-    setChecked(newChecked);
+  const toggleColorMode = () => () => {
+    handleModeChange();
   };
   return (
     <Box flexGrow={1} position={"sticky"}>
@@ -89,8 +79,7 @@ const SideBar = () => {
           <ListItemText id="switch-list-label-mode" primary="Dark" />
           <Switch
             edge="end"
-            onChange={handleToggle("mode")}
-            checked={checked.indexOf("mode") !== -1}
+            onChange={toggleColorMode}
             inputProps={{
               "aria-labelledby": "switch-list-label-mode",
             }}
