@@ -59,7 +59,7 @@ const SideBar = () => {
             <ListItemAvatar>
               <Avatar
                 alt="Cindy Baker"
-                src="/public/triangle_background-9df4fa2e10f0e294779511e99083c2bc.jpg"
+                src="/triangle_background-9df4fa2e10f0e294779511e99083c2bc.jpg"
               />
             </ListItemAvatar>
             <ListItemText id="profile-list-label-mode" primary="Profile" />
