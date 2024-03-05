@@ -51,7 +51,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      width: "20ch",
+      width: "40ch",
     },
   },
 }));
@@ -155,7 +155,7 @@ export default function NavBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1, marginBottom: 5 }}>
+    <Box sx={{ flexGrow: 1, marginBottom: 5, justifyContent: "space-between" }}>
       <AppBar position="sticky">
         <Toolbar>
           <IconButton
